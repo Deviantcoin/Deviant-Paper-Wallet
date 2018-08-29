@@ -2,8 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="Deviant Coin Wallet Generator - Offline Paper wallet creation">
-    <meta name="keywords" content="deviant, coin, paper, wallet, generator, cryptocurrencies, bitcoin, litecoin, dogecoin"/>
+    <meta name="description"
+          content="!Deviant Wallet Generator - Offline wallet creation">
+    <meta name="keywords" content="deviant, paper, wallet, generator, cryptocurrencies, bitcoin, litecoin, dogecoin"/>
 
     <title>Deviant Wallet Generator</title>
     <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
@@ -3502,7 +3503,7 @@
             border: 1px solid #1daaf9;
             width: 16%;
             padding: 9px;
-            font-size: 10px;
+            font-size: 12px;
             color: #00a8fb;
         }
 
@@ -4422,41 +4423,44 @@
                 display: none
             }
             #paperarea .artwallet .papersvg1{
-                width:100%;
+                width:1200px;
+                height:1200px;
+                margin-left:-250px
             }
 
             #paperarea .artwallet .btcprivwif {
-                top: 155px;
-                right: 70px;
-                color: #ccd9e2;
-                font-size: 12px;
+                top: 450px;
+                right: 100px;
+                color: #fff;
+                font-size: 25px;
+                width: 400px;
             }
             #paperarea .artwallet .btcaddress {
-                top: 250px;
-                left: 320px;
-                font-size: 15px;
+                top: 750px;
+                left: 600px;
+                width: 320px;
+                right: 0;
+                font-size: 25px;
             }
             #paperarea .artwallet .qrcode_public {
-                top: 305px;
-                left: 350px;
+                top: 850px;
+                left: 680px;
             }
             #paperarea .artwallet .papersvg {
-                width: 1000px;
-                height: auto;
+                width:1200px;
+                height:1200px;
+                margin-top:100px
             }
 
             .qrcode_private canvas, .qrcode_public canvas {
-                width: 100% !important;
-                height: auto !important;
+                width: 150px !important;
+                height: 150px !important;
             }
 
 
 
             #paperarea .artwallet .qrcode_private {
-                top: 120px;
-                left: 92%;
-                width: 16%;
-                position: absolute;
+                top: 350px; left: 650px; width: 150px; position: absolute;
             }
 
             body {
@@ -4558,8 +4562,8 @@
         }
 
         .qrcode_private canvas, .qrcode_public canvas {
-            width: 55px !important;
-            height: 50px !important;
+            width: 55px ;
+            height: 50px ;
         }
 
         video {
@@ -4762,7 +4766,7 @@
             <div class="grid-item">
 
                 <button onclick="myFunction()" class="papergenerate lan i18n"><span id="lanBtn"></span><img
-                        src="images/downarow1.png" class="icon"></button><img src="images/menu.png" class="icon">Menu
+                        src="images/downarow" class="icon"></button><img src="images/menu.png" class="icon">Menu
             </div>
         </div>
         <div class="grid-container i18n">
@@ -5102,16 +5106,16 @@ https://deviantcoin.io/how-to-make-a-deviant-coin-paper-wallet/" target="_blank"
 <div id="footer" class="footer">
     <div class="row">
         <div class="column">
-        <p style="font-size: 13px;">© 2018 Deviant Coin</p>
+        <p style="font-size: 13px;">© 2018 Deviant Fundation</p>
         </div>
         <div class="column">
             <img src="logos/deviantcoin.png" class="footlogo">
         </div>
         <div class="column">
         <ul>
-            <li><a class="active" href="https://deviantcoin.io/terms/">Terms and Conditions</a></li>
-            <li><a href="https://deviantcoin.io/news/">News</a></li>
-            <li><a href="mailto:contact@deviantcoin.io">Support</a></li>
+            <li><a class="active" href="#">Terms and Conditions</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Support</a></li>
         </ul>
         </div>
     </div>
@@ -5446,7 +5450,7 @@ https://deviantcoin.io/how-to-make-a-deviant-coin-paper-wallet/" target="_blank"
             var t = ninja.qrCode.getTypeNumber(e), i = new QRCode(t, QRCode.ErrorCorrectLevel.H);
             i.addData(e), i.make();
             var o = i.getModuleCount() * n, a = i.getModuleCount() * n, r = document.createElement("canvas");
-            r.width = 10 * o, r.height = 10 * a, r.style.width = o + "px", r.style.height = a + "px";
+            r.width = 10 * o, r.height = 10 * a, r.style.width = 55 + "px", r.style.height = 55 + "px";
             var s = r.getContext("2d");
             s.scale(10, 10);
             for (var d = o / i.getModuleCount(), l = a / i.getModuleCount(), c = 0; c < i.getModuleCount(); c++) for (var u = 0; u < i.getModuleCount(); u++) s.fillStyle = i.isDark(c, u) ? "#000000" : "#ffffff", s.fillRect(u * d, c * l, d, l);
@@ -5555,7 +5559,7 @@ https://deviantcoin.io/how-to-make-a-deviant-coin-paper-wallet/" target="_blank"
                 securitychecklistofflineOK: "You are running this generator from your own download.",
                 lanBtn: "English",
                 action: "Actions",
-                diy:"DIY Tutorial"
+                diy:"Instructions"
 
 
 
@@ -5645,7 +5649,7 @@ https://deviantcoin.io/how-to-make-a-deviant-coin-paper-wallet/" target="_blank"
                 paperwalletback: "<ul><li>Pour transférer des fonds sur ce porte-monnaie, envoyez des fonds à l'adresse publique, à n'importe quel moment.</li><li>Vérifier votre solde en cherchant l'adresse publique dans un explorateur de Blockchain.</li><li><b>NE REVELEZ PAS VOTRE CLE PRIVEE</b> jusqu'au moment où vous voudrez importer votre solde dans un porte-monnaie logiciel.</li></ul><b>Montant :</b> ___________       <b>Date :</b> ________________<br /><b>Notes :</b> ______________________________________",
                 lanBtn: "Francis",
                 action:"Actions",
-                diy:"DIY Article Blog"
+                diy:"Instructions"
             },
             de: {
                 choosecurrency: "Kryptowährung Auswahl",
@@ -5730,7 +5734,7 @@ https://deviantcoin.io/how-to-make-a-deviant-coin-paper-wallet/" target="_blank"
                 paperwalletback: "<ul><li>Verwenden Sie Ihre öffentliche Adresse, um Zahlungen auf diese Geldbörse zu überweisen.</li><li>Kontrollieren Sie Ihr Guthaben durch Eingabe Ihrer öffentlichen Adresse mit Hilfe eines Online Blockchain-Explorers. z.B. https://chainz.cryptoid.info</li><li><b>NIEMALS DEN PRIVATEN SCHLÜSSEL PREISGEBEN!</b> Importieren Sie den privaten Schlüssel erst in eine Online-Geldbörse, wenn Sie Ihr Guthaben ausgeben möchten.</li></ul><b>Guthaben:</b> _____________ <b>Datum:</b> ________________<br /><b>Notizen:</b> ______________________________________",
                 lanBtn: "German",
                 action:"Actions",
-                diy:"DIY Article Blog"
+                diy:"Instructions"
             },
             nl: {
                 choosecurrency: "Kies Valuta",
@@ -5815,7 +5819,7 @@ https://deviantcoin.io/how-to-make-a-deviant-coin-paper-wallet/" target="_blank"
                 paperwalletback: "<ul><li>Om fondsen naar deze portomonee over te maken, kun je munten naar dit publiek adres sturen, wanneer je  maar wilt.</li><li>Bevestig je fondsen door een publieke blockchain explorers te kijken in zoals blockchain.info.</li><li><b>LAAT NOOIT JE PRIVE SLEUTEL ZIEN</b> totdat je bereid bent de balans van deze portomonee te importeren in deze client portomonee, een exchange of een online portomonee.</li></ul><b>Hoeveelheid :</b> ___________       <b>Datum :</b> ________________<br /><b>Notities :</b> ______________________________________",
                 lanBtn: "Dutch",
                 action:"Actions",
-                diy:"DIY Article Blog"
+                diy:"Instructions"
             },
             pt: {
                 choosecurrency: "Escolha a moeda",
@@ -5902,7 +5906,7 @@ https://deviantcoin.io/how-to-make-a-deviant-coin-paper-wallet/" target="_blank"
                 paperwalletback: "<ul><li>Para depositar fundos nessa Carteira de Papel, envie dinheiro para seu endereço público, a qualquer momento.</li><li>Verifique seu saldo pesquisando por seu endereço público usando um explorador de blockchain como o blockchain.info.</li><li><b>NÃO MOSTRE A CHAVE PRIVADA</b> até que você esteja pronto para importar o saldo para um cliente de cripto-moeda, casa de câmbio (exchange) ou carteira online.</li></ul><b>Valor: </b>___________       <b>Data: </b>_______________<br /><b>Notas :</b> ______________________________________",
                 lanBtn: "Português",
                 action:"Actions",
-                diy:"DIY Article Blog"
+                diy:"Instructions"
 
             },
             ru: {
@@ -5988,7 +5992,7 @@ https://deviantcoin.io/how-to-make-a-deviant-coin-paper-wallet/" target="_blank"
                 paperwalletback: "<ul><li>Для пополнения средств этого бумажного кошелька отправьте криптовалюту на его открытый адрес.</li><li>Проверьте Ваш баланс, найдя открытый адрес в просмотрщиках блокчейна, таких как blockchain.info.</li><li><b>НЕ РАССКРЫВАЙТЕ ЗАКРЫТЫЙ КЛЮЧ</b> пока Вы не будете готовы импортировать баланс этого кошелька в крипто-клиент, биржу или онлайн-кошелек.</li></ul><b>Сумма :</b> ___________       <b>Дата :</b> ________________<br /><b>Пометки :</b> ______________________________________",
                 lanBtn: "Русский",
                 action:"Actions",
-                diy:"DIY Article Blog"
+                diy:"Instructions"
             },
             es: {
                 choosecurrency: "Elige criptodivisa",
@@ -6073,7 +6077,7 @@ https://deviantcoin.io/how-to-make-a-deviant-coin-paper-wallet/" target="_blank"
                 paperwalletback: "<ul><li>Para depositar fondos en esta cartera de papel, envía criptomonedas a su dirección pública, en cualquier momento.</li><li>Comprueba tu balance buscando la dirección pública en un explorador de bloques como blockchain.info.</li><li><b>NUNCA REVELES LA CLAVE PRIVADA</b> hasta que estés listo para importar el balance de esta cartera a un cliente de criptomoneda, portal de cambio o cartera online.</li></ul><b>Cantidad:</b> ___________       <b>Fecha:</b> ________________<br /><b>Notas:</b> ______________________________________",
                 lanBtn: "Spanish",
                 action:"Actions",
-                diy:"DIY Article Blog"
+                diy:"Instructions"
             },
             it: {
                 choosecurrency: "Scegli una valuta",
@@ -6181,7 +6185,7 @@ https://deviantcoin.io/how-to-make-a-deviant-coin-paper-wallet/" target="_blank"
                 vanityalertinvalidinputprivatekeysmatch: "Dati inseriti non validi. Entrambe le chiavi private combaciano. Devi inserire due chiavi differenti.",
                 lanBtn: "Italiano",
                 action:"Actions",
-                diy:"DIY Article Blog"
+                diy:"Instructions"
             },
             ua: {
                 choosecurrency: "Оберіть валюту",
@@ -6266,7 +6270,7 @@ https://deviantcoin.io/how-to-make-a-deviant-coin-paper-wallet/" target="_blank"
                 paperwalletback: "<ul><li>Внести гроші на паперовий гаманець: відправте кошти на публічну адресу.</li><li>Перевірити стан рахунку: введіть публічну адресу гаманця в оглядач блокчейна (для біткойна це blockchain.info).</li><li><b>НІКОЛИ НІКОМУ НЕ ПОКАЗУЙТЕ ПРИВАТНИЙ КЛЮЧ</b>, аж поки ви не зберетесь імпортувати кошти з цього гаманця на інший будь-який гаманець.</li></ul><b>Кількість :</b> ___________      <b>Дата :</b> ____________<br /><b>Нотатки :</b> _______________________________",
                 lanBtn: "Українська",
                 action:"Actions",
-                diy:"DIY Article Blog"
+                diy:"Instructions"
             },
             tr: {
                 title: "Kagit Cüzdan Üreticisi",
@@ -6285,7 +6289,7 @@ https://deviantcoin.io/how-to-make-a-deviant-coin-paper-wallet/" target="_blank"
                 paperwalletback: "<ul><li>Bu kağıt cüzdanına para yatırmak için her zaman ortak adresine kripto para birimi gönderin.</li><li>Blockchain.info gibi bir blok gezgini site araciligi ile yerel adresinizdeki bakiyeyi dogrulayin</li><li><b>PRIVATE KEY KESINLIKLE YAYINLAMAYIN</b>Ta ki bu cüzdan üzerindeki bakiyeyi, bir sifreleme sunucusu, Borsa veya çevrimiçi cüzdan'a aktarmaya hazir olana kadar.</li></ul><b>Miktar :</b> ___________ &nbsp; &nbsp; &nbsp; <b>Tarih :</b> ________________<br /><b>Notlar :</b> ______________________________________",
                 lanBtn: "Türk",
                 action:"Actions",
-                diy:"DIY Article Blog"
+                diy:"Instructions"
             },
             pl: {
                 choosecurrency: "Wybierz walutę",
@@ -6372,7 +6376,7 @@ https://deviantcoin.io/how-to-make-a-deviant-coin-paper-wallet/" target="_blank"
                 paperwalletback: "<ul><li> Aby wpłacić dodatkowe fundusze do tego portfela, wyślij bitcoiny na publiczny adres.</li><li> Sprawdź dostępne środki szukając publicznego adresu w usługach takich jak blockchain.info.</li><li><b>NIE ODSŁANIAJ KLUCZA PRYWATNEGO</b> dopóki nie jesteś gotowy na wydanie wszystkich środków, znajdujących się w tym portfelu.</li></ul><b>Wpłacona kwota :</b> ___________       <b>Data :</b> ________________<br /><b>Uwagi :</b> ______________________________________",
                 lanBtn: "Polski",
                 action:"Actions",
-                diy:"DIY Article Blog"
+                diy:"Instructions"
             },
             zh: {
                 choosecurrency: "選擇幣別",
@@ -6451,7 +6455,7 @@ https://deviantcoin.io/how-to-make-a-deviant-coin-paper-wallet/" target="_blank"
                 paperwalletback: "<ul><li>若您要使用這個紙錢包，您可以隨時的轉入加密貨幣到公鑰地址。</li><li>您可以透過blockchain.info等類似網站輸入公鑰查詢錢包餘額。在您準備將紙錢包餘額匯出或使用前，</li><li><b>絕對不要公開私鑰</b>。</li></ul><b>餘額：</b> ___________       <b>日期：</b> ________________<br /><b>備註：</b> ______________________________________",
                 lanBtn: "中文",
                 action:"Actions",
-                diy:"DIY Article Blog"
+                diy:"Instructions"
             }
         }
     };
@@ -6897,18 +6901,9 @@ https://deviantcoin.io/how-to-make-a-deviant-coin-paper-wallet/" target="_blank"
 
         document.body.innerHTML = originalContents;
     }
-</script>
-<!--<script>
-    function printDiv1(divName) {
-        var printContents = document.getElementById(divName).innerHTML;
-        var originalContents = document.body.innerHTML;
-
-        document.body.innerHTML = printContents;
-
-   //     window.print();
-
-        document.body.innerHTML = originalContents;
+    window.onafterprint = function(){
+        window.location.reload(true);
     }
-</script>-->
+</script>
 </body>
 </html>
